@@ -29,7 +29,7 @@ namespace TestBD.Server.Repository
 
         public async Task UpdateStatusAsync(UpdatePaymentStatusDto dto)
         {
-            string[] allowedStatuses = { "Paied", "Waiting", "Canceled" };
+            string[] allowedStatuses = { "Paied", "Waiting", "Cancelled" };
             var payment = await payments.FirstOrDefaultAsync(x => x.PaymentId == dto.PaymentId);
             if (!allowedStatuses.Contains(dto.Status)) {
                 throw new Exception("No such status for payment");

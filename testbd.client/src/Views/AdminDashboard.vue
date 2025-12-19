@@ -933,10 +933,6 @@
     selectedPayment.value = payment;
     showPaymentModal.value = true;
 
-    // Загружаем историю платежа (если есть такой метод)
-    // paymentHistory.value = await patientService.getPaymentHistory(payment.paymentId);
-
-    // Временные тестовые данные
     paymentHistory.value = [
       { date: new Date(payment.paymentDate), status: payment.status, user: 'Система' }
     ];
@@ -1807,6 +1803,9 @@
     gap: 1rem;
     padding: 1.5rem;
     border-top: 1px solid #e1e5eb;
+  }
+  .modal-footer .btn-delete{
+      width: 10vw;
   }
 
   .btn-primary {

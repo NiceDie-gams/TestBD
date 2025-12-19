@@ -2,7 +2,7 @@
   <div class="patients-container">
     <!-- Заголовок -->
     <div class="header">
-      <div class="header-icon">👥</div>
+      <img src ="../../assets/icons/people-audience.svg" class="header-icon" />
       <div>
         <h1>Завершенные приемы пациентов</h1>
         <p class="subtitle">Просмотр завершенных приемов и добавление записей в историю посещений</p>
@@ -84,15 +84,12 @@
         <!-- Статистика -->
         <div v-else class="stats">
           <span class="stat-item">
-            <span class="stat-icon">📋</span>
             Всего приемов: {{ appointments.length }}
           </span>
           <span class="stat-item">
-            <span class="stat-icon">👤</span>
             Уникальных пациентов: {{ uniquePatientsCount }}
           </span>
           <span class="stat-item">
-            <span class="stat-icon">👨‍⚕️</span>
             Врач ID: {{ currentDoctorId ? currentDoctorId.substring(0, 8) + '...' : 'Не определен' }}
           </span>
         </div>
@@ -705,7 +702,9 @@
   }
 
   .header-icon {
-    font-size: 48px;
+    width: 10vw;
+    height: 10vh;
+    position: relative;
   }
 
   .header h1 {

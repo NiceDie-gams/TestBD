@@ -47,8 +47,8 @@
               <select v-model="profile.gender"
                       :disabled="!editMode || saving"
                       :class="{ 'readonly': !editMode }">
-                <option value="M">Мужской</option>
-                <option value="F">Женский</option>
+                <option value="М">Мужской</option>
+                <option value="Ж">Женский</option>
               </select>
             </div>
           </div>
@@ -140,7 +140,7 @@
             <h4>Контактная информация</h4>
             <p>Если у вас возникли проблемы с обновлением профиля, свяжитесь с нами:</p>
             <p class="contact-info">
-              📞 Регистратура: 8 (800) 123-45-67<br>
+              📞 Регистратура: +7 (978) 123-45-67<br>
               📧 Email: support@clinic.ru
             </p>
           </div>

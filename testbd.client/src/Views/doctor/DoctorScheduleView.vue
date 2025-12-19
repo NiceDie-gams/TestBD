@@ -103,11 +103,6 @@
                     class="action-btn secondary">
               👁️ Подробнее
             </button>
-            <button v-if="slot.appointment?.status === 'booked'"
-                    @click="cancelAppointment(slot)"
-                    class="action-btn danger">
-              ❌ Отменить
-            </button>
           </div>
           <div class="slot-actions" v-else-if="slot.isAvailable">
             <button class="action-btn free" disabled>

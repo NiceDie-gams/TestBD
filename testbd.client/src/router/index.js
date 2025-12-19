@@ -34,7 +34,13 @@ const routes = [
     name: 'PatientDashboard',
     component: () => import('@/views/patient/DashboardView.vue'),
     meta: { requiresAuth: true, roles: ['user'] },
+    redirect: '/patient/appointments', // Добавьте redirect
     children: [
+      {
+        path: 'appointments', // Без слеша в начале!
+        component: () => import('@/views/patient/AppointmentView.vue'),
+        name: 'patient-appointments' // Убедитесь, что name совпадает
+      },
       {
         path: 'profile',
         component: () => import('@/views/patient/ProfileView.vue'),
@@ -46,12 +52,6 @@ const routes = [
         name: 'patient-history'
       }
     ]
-  },
-  {
-    path: '/patient/appointments',
-    name: 'PatientAppointments',
-    component: () => import('@/views/patient/AppointmentView.vue'),
-    meta: { requiresAuth: true, roles: ['user'] }
   },
   // Панель врача
 
